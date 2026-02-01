@@ -24,7 +24,7 @@
         transition: 1s;
         background-image: 
         linear-gradient( to right,#222,#2b2a2a),
-        url(../img/avatar19.jpeg); 
+        url(./avatar19.jpeg); 
         background-repeat: no-repeat;
         background-size:cover;
         background-position: center;
@@ -37,7 +37,7 @@
     .container:hover{
          background-image: 
         linear-gradient( to right,#222222 30% ,#2b2a2a00),
-        url(../img/avatar19.jpg); 
+        url(./avatar19.jpg); 
     }
     header{
         margin: auto 1px;
@@ -53,6 +53,10 @@
         text-transform: uppercase;
         font-size: 32px;
         margin:auto 0px;
+        animation-name: logo;
+        animation-duration: 4s;
+        animation-delay:1s ;
+        animation-iteration-count: 1;
     }
     ul{
         /* width: 40%; */
@@ -84,16 +88,11 @@
         padding: 30px;
         margin-top: 50px;
     }
+   
     .containt h2{
-        
         font-size: 100px;
         text-transform: uppercase;
-    }
-    .containt h2{
-        animation-name: avatar;
-        animation-duration: 4s;
-        animation-delay:1s ;
-        animation-iteration-count: 1;
+        
 
     }
     .containt p{
@@ -113,24 +112,50 @@
         border-color: #fff;
         color: white;
     }
-    @keyframes avatar{
+    @keyframes logo{
         from{
-             transform:rotatex(360deg);
-             color:#22222294
+             transform:rotatex(180deg);
+             color:silver
         }
         to{
             transition: 1s;
             color:#222222b4            
         }
     }
+    @media (min-width:600px) {
+            .container{  
+        transition: 1s;
+        background-image: 
+        linear-gradient( to right,#222,#2b2a2a),
+        url(./avatar19.jpeg); 
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        margin: 20px;
+        padding: 0px 10px;        
+    }
+    .container:hover{
+         background-image: 
+        linear-gradient( to right,#222222 30% ,#2b2a2a00),
+        url(./avatar19.jpg); 
+    }
+    }
     @media (max-width:600px) {
         .container{
             background-image: 
-            linear-gradient( to right,#222222 30% ,#2b2a2a00),
-            url(../img/avatar19.jpg); 
+        linear-gradient( to right,#222222 30% ,transparent),
+        url(./avatar19.jpg); 
+        }
+        .container:hover{
+        background-image: 
+        linear-gradient( to right,#222222 30% ,transparent),
+        url(./avatar19.jpg); 
+        }
     }
-        
-    }
+
     </style>
 </head>
 <body>
